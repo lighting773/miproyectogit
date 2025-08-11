@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Sencilla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Encabezado -->
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Mi Página Web</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#inicio" class="hover:underline">Inicio</a></li>
+                    <li><a href="#acerca" class="hover:underline">Acerca</a></li>
+                    <li><a href="#contacto" class="hover:underline">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Principal -->
+    <main class="container mx-auto my-8 px-4">
+        <section id="inicio" class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4">Bienvenido</h2>
+            <p class="text-gray-700">Esta es solo una prueba </p>
+        </section>
+
+        <section id="acerca" class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4">¿Hola Todo Bien?</h2>
+            <p class="text-gray-700">esta pagina web esta creada para GITHub.</p>
+        </section>
+
+        <section id="contacto">
+            <h2 class="text-3xl font-semibold mb-4">Contacto</h2>
+            <p class="text-gray-700">¿Tienes alguna pregunta? Contáctanos a través de nuestro correo: <a href="ricaurtejuandaniel@gmail.com" class="text-blue-600 hover:underline">info@example.com</a></p>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript para agregar interactividad básica
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
